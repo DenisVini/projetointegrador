@@ -29,7 +29,7 @@ export class CarrinhoService {
     return this.http.post<Carrinho>('http://localhost:8080/carrinho/post', carrinho, this.token)
   }
 
-  DeleteById(id:number){
+  deleteByIdCarrinho(id:number){
     return this.http.delete(`http://localhost:8080/carrinho/delete/${id}`,this.token)
   }
 

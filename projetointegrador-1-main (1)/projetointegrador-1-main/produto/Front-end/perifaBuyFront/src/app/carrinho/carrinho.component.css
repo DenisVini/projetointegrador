@@ -76,3 +76,7 @@
         .fcv{
             color: rgb(228, 19, 19); /*cor do botão de adicionar*/
         }
+
+        .pointer{
+            cursor: pointer;
+        }

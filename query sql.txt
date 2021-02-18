@@ -1,18 +1,15 @@
 use db_perifabuy;
 SELECT * FROM db_perifabuy.tb_categoria_produto;
-
 -- popular categoria produto
-insert into tb_categoria_produto values 
+insert into tb_categoria_produto values
 	(default, 'farmacia'),
 	(default, 'padaria'),
 	(default, 'mercearia'),
 	(default, 'serviços gerais'),
 	(default, 'comidas e bebidas');
-
-    
 -- populando produtos
 select * from tb_produto;
-insert into tb_produto values 
+insert into tb_produto(id,descricao,imagem_produto,nome,preco_unitario,categoria_id_categoria_produto) values
 	(default,'Todo conforto','https://i.imgur.com/BwEPPF8.png','FRALDA-Tam G',25,1),
     (default,'Alívio imediato ao mal estar','https://i.imgur.com/PnF2zTD.png','ESTOMAZIL',1.99,1),
     (default,'Para higienizar da melhor forma','https://i.imgur.com/jWKKCnB.jpg','LENCINHOS UMED.',8.99,1),
@@ -20,17 +17,15 @@ insert into tb_produto values
     (default,'Indicado para resfriados','https://i.imgur.com/93EHMHU.jpg','RESFENOL',9.99,1),
     (default,'Conforto diário','https://i.imgur.com/2ZTbVI9.jpg','ABSORVENTE',3.99,1),
     (default,'Alívio imediato','https://i.imgur.com/y76a4yD.jpg','LUFTAGEL',6.99,1),
-    (default,'Para dores de cabeça','https://i.imgur.com/Y5eonfc.jpg','NEOSALDINA',2.99,1), 
-    
+    (default,'Para dores de cabeça','https://i.imgur.com/Y5eonfc.jpg','NEOSALDINA',2.99,1),
     (default,'Melhor pão da região','https://i.imgur.com/80KtGaL.jpg','PÃO FRANCÊS',0.75,2),
     (default,'Qualidade Total','https://i.imgur.com/UXqGkvm.jpg','BRIGADEIRO',1.99,2),
-    (default,'Pudim de Leite Condensado','https://i.imgur.com/4YYYG6X.jpg','PUDIM',18.99,2),
+    (default,'Pudim de Leite Condensado','https://i.imgur.com/4YYYG6X.jpg','PUDIM',1,2),
     (default,'Delicia total','https://i.imgur.com/R3zbl4W.jpg','SONHO',2.49,2),
     (default,'O melhor bolo de pão de ló','https://i.imgur.com/yTOVXtW.jpg','BOLO TRADICIONAL',14.99,2),
     (default,'Massa leve','https://i.imgur.com/wH7E74M.jpg','BISCOITO SAMANTHA',3.49,2),
     (default,'Tortinhas de qualidade','https://i.imgur.com/LMlCdYQ.jpg','TORTA DE MORANGO',16.82,2),
     (default,'Derrete na boca','https://i.imgur.com/LSkCwOq.jpg','BOMBA',3.49,2),
-    
     (default, 'Remove todas as manchas.', 'https://i.imgur.com/qNQz7Db.png','SABÃO EM PÓ', 8.99,3),
 	(default, 'Ótima para utilizar em receitas.', 'https://i.imgur.com/mFNrRBg.png','MANTEIGA', 5.71,3),
 	(default, 'Limpeza profunda.', 'https://i.imgur.com/MAKcj2C.png','DETERGENTE', 1.99,3),
@@ -39,7 +34,6 @@ insert into tb_produto values
 	(default, 'Com grãos selecionados.', 'https://i.imgur.com/QM61ofm.jpg','FEIJÃO', 5.99,3),
 	(default, 'Melhores ofertas de desinfetante.', 'https://i.imgur.com/oviJAsh.jpg', 'DESINFETANTE OMO', 7.99,3),
 	(default, 'O preparo do arroz soltinho não tem mistério.', 'https://i.imgur.com/zhcE3W3.jpg', 'ARROZ', 14.79,3),
-    
     (default, 'Moderno criado com estilo', 'https://i.imgur.com/frHxcyp.jpg', 'CAMA', 300.66, 4),
     (default, 'Melhor durabilidade', 'https://i.imgur.com/V0A6zBe.jpg', 'JOGO DE COZINHA', 1382.99,4),
     (default, 'Para ficar bem organizado', 'https://i.imgur.com/eMh7OX8.jpg', 'GUARDA ROUPA', 1000.99,4),
@@ -48,7 +42,6 @@ insert into tb_produto values
     (default, 'Ferramentas', 'https://i.imgur.com/vhY8XAx.jpg', 'MARTELO', 24.99,4),
     (default, 'Medições Manuais', 'https://i.imgur.com/8aEqIOj.jpg', 'TRENA', 12.99,4),
     (default, 'Serras e Serrotes', 'https://i.imgur.com/Ug5KvXt.jpg', 'ARCO DE SERRA', 22.99,4),
-    
     (default,'Com deliciosas fatias de bacon','https://i.imgur.com/YxWX3BD.jpg','X-BURGER',10.99,5),
     (default,'Especial da casa','https://i.imgur.com/IKZF7Tg.jpg','ULTRA X4',9.99,5),
     (default,'Alivia a sua fome','https://i.imgur.com/EPenDKh.jpg','BATATA FRITA',9.99,5),
@@ -57,4 +50,3 @@ insert into tb_produto values
     (default,'Natural e refrescante','https://i.imgur.com/40UcW0p.jpg','SUCO DE MORANGO',2.99,5),
     (default,'350ml','https://i.imgur.com/lA3cn3M.jpg','SPRITE',3.99,5),
     (default,'Natural e refrescante','https://i.imgur.com/s5excCq.jpg','SUCO DE LARANJA',6.99,5);
-    

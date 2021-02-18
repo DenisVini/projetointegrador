@@ -15,4 +15,6 @@ export class FormaPagamentoComponent implements OnInit {
     window.scroll(0,0)
   }
 
+
+  
 }
