@@ -56,6 +56,7 @@ export class PadariasComponent implements OnInit {
       this.carrinho.produto = resp
       this.postCarrinho(this.carrinho)
       console.log(this.carrinho.produto)
+      alert("Produto adicionado ao carrinho")
     })
   }
 

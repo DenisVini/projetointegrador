@@ -1,30 +1,23 @@
-  <!--Carrinho banner-->
-      <div class="corPerifa">
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <div class="row d-flex justify-content-center">
-              <div class="col-md-8">
-                <img
-                  class="meuCarrinho_imagem"
-                  src="../../assets/img/carrinho (2).png"
-                  alt="meuCarrinho"
-                />
-              </div>
-            </div>
-          </div>
+<!--Carrinho banner-->
+<!-- header -->
+<div class="corPerifa">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+          <img class="meuCarrinho_imagem" src="../../assets/img/carrinho (2).png" alt="meuCarrinho" />
         </div>
       </div>
-
-    <!--Fim banner carrinho-->
-
+    </div>
+  </div>
+</div>
+<!--Fim banner carrinho-->
 <!--Carrinho-->
 <div class="container-fluid">
-
-
-  <!--Listagem de Produtos-->
   <div class="table-responsive-sm ">
     <table class="table">
       <thead>
+        <!--Linha fora do laço de repetição acima ^-->
         <tr>
           <th>
             Seus produtos:
@@ -47,54 +40,23 @@
         </tr>
       </thead>
       <tbody>
-
-
-        <tr class="">
-        <div class="row w-100 d-flex justify-content-center ">
-
-
-
-          <!--Se for alterar o design da apresentação dos produtos no carrinho nao esquecer de fazer dentro dessa div-->
-          <div class="flex-wrap col-md-6 d-flex justify-content-center mb-5" *ngFor="let produto of listaCarrinho">
-
-
-
-            <div class="card corFundo mx-4 mb-5 " style="width: 45%;">
-                <img src="{{produto.produto.imagem_produto}}" class="card-img-top" alt="Imagem Produto">
-                <div class="card-body">
-                  <h5 class="card-title">{{produto.produto.nome}}</h5>
-                 <h5 class="card-text">R$: {{produto.produto.precoUnitario}}</h5>
-
-                <div class="form-row align-items-center">
-                  <td class=" align-middle ">
-                    <a href="">
-                      <i class="fa fa-trash-o text-dark fs-16 centralizar" aria-hidden="true"(click)="remover(produto.id)"></i>
-                    </a>
-                  </td>
-
-                  <div class="col-auto my-1">
-                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preferência</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-
-                      <option value="1">1</option>
-
-                      <option value="2">2</option>
-
-                      <option value="3">3</option>
-
-                      <option value="4">4</option>
-
-                      <option value="5">5</option>
-
-                    </select>
-                  </div>
-                </div>
-
-                </div>
+        <tr class="" *ngFor="let produto of listaCarrinho">
+          <td class="align-middle">
+            <div class="flex-container card p-0">
+              <div>
+                <img class="wh-150 p-05" src="{{produto.produto.imagem_produto}}" alt="Imagem de capa do card">
+              </div>
+              <div class="p-05">
+                <h6 class="">
+                  {{produto.produto.nome}}
+                </h6>
+                <p class="justify wh-650">
+                  {{produto.produto.descricao}}
+                </p>
               </div>
             </div>
-          </div>
-        <td class="align-middle">
+          </td>
+          <td class="align-middle">
             <div class="centralizar">
               <nav aria-label="Navegação de página exemplo">
                 <ul class="pagination ">
@@ -103,10 +65,19 @@
                       <span class="sr-only">Anterior</span>
                     </a>
                   </li>
-
                   <!--ESCOLHA DA QUANTIDADE DE PRODUTOS-->
+                  <div class="form-row align-items-center">
+                    <div class="col-auto my-1">
+                      <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preferência</label>
+                      <select (change)="quantidade($event)" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                    </div>
+                  </div>
                   <!--/ESCOLHA DA QUANTIDADE DE PRODUTOS-->
-
                   <li class="page-item">
                     <a class="botaoMais" href="#" aria-label="Próximo">
                       <span class="sr-only">Próximo</span>
@@ -116,24 +87,31 @@
               </nav>
             </div>
           </td>
+          <td class="align-middle">
+            <div class="centralizar">
+              {{produto.produto.precoUnitario | currency: 'BRL'}} 
+            </div>
+          </td>
+          <td class=" align-middle ">
+            <a class="card-link fc fa fa-trash fa-3x ml-140 pointer" aria-hidden="true" (click)='delete(produto.id)'></a>
+            <!--<a>
+              <i class="fa fa-trash-o text-dark fs-16 centralizar" aria-hidden="true" (click)='remover(produto.id)' ></i>
+            </a>-->
+          </td>
         </tr>
-
       </tbody>
     </table>
   </div>
   <!--FIM Listagem de Produtos-->
-
-
   <!--BOTÕES-->
   <div class="d-flex justify-content-between">
     <div class="p-2">
       <a routerLink="/inicio" class="btn btn-info active" role="button" aria-pressed="true">Continuar Comprando</a>
     </div>
-
     <div class="p-2">
-      <a routerLink="/forma-pagamento" class="btn btn-success active" role="button" aria-pressed="true">Finalizar compra</a>
+      <a routerLink="/forma-pagamento" class="btn btn-success active" role="button" aria-pressed="true">Finalizar
+        compra</a>
     </div>
   </div>
   <!--BOTÕES-->
-
 </div>

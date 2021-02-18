@@ -22,7 +22,7 @@ import perifaDelivery.PerifaBuy.repository.CarrinhoRepository;
 
 @RestController
 @RequestMapping("/carrinho") // ALTERAR ISSO PRA CLASSE DESEJADA
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CarrinhoController implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry index) {
 		index.addViewController("/").setViewName("forward:/index.html");
@@ -37,17 +37,24 @@ public class CarrinhoController implements WebMvcConfigurer {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
-	@GetMapping("/meu_carrinho/{id}")
-	public ResponseEntity<Carrinho> getById(@PathVariable Long id) {
-		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
+	@GetMapping ("/getById/{id}")
+	public ResponseEntity <Carrinho> getById(@PathVariable Long id){	
+		return repository.findById(id)
+				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/historico_compras")
+	/*@GetMapping("/meu_carrinho/{id}")
+	public ResponseEntity<Carrinho> getById(@PathVariable Long id) {
+		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
+	}*/
+	
+	/*@GetMapping("/historico_compras")
 	public ResponseEntity<List<Carrinho>> GetAll()
 	{
 		return ResponseEntity.ok(repository.findAll());
-	}
+	}*/
 	
 	@PostMapping("/post")
 	public ResponseEntity<Carrinho> post(@RequestBody Carrinho objeto)
@@ -55,14 +62,14 @@ public class CarrinhoController implements WebMvcConfigurer {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(objeto));
 	}
 	
-	@PutMapping("/put")
+	@PutMapping("/put/{id}")
 	public ResponseEntity<Carrinho> put(@RequestBody Carrinho objeto)
 	{
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(objeto));
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	public void delete(@PathVariable Long id) {
+	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
 	
