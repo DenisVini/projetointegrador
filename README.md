@@ -7,10 +7,12 @@
 <br>
 <br>
 
+
 - :man_technologist: :woman_technologist: **Desenvolvedorxs Full-Stack**
-- :books: **Primeira versão do projeto PerifaBuy que está em desenvolvimento e terá futuras implementações.  **
-- :bulb: **PerifaBuy - Aplicativo que conecta você aos comerciantes do seu bairro**
-- :book: **Utilizado Scrum como metodologia ágil em nossa gestão de projeto **
+- :books: **Primeira versão do projeto PerifaBuy que está em desenvolvimento e terá futuras implementações.**
+- :bulb: **PerifaBuy - Aplicativo que conecta você aos comerciantes do seu bairro.**
+- :book: **Utilizado Scrum como metodologia ágil em nossa gestão de projeto.**
+
 
 
 
