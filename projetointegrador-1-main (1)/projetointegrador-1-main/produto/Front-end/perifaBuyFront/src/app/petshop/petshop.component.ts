@@ -8,11 +8,11 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
-  selector: 'app-servicos-gerais',
-  templateUrl: './servicos-gerais.component.html',
-  styleUrls: ['./servicos-gerais.component.css']
+  selector: 'app-petshop',
+  templateUrl: './petshop.component.html',
+  styleUrls: ['./petshop.component.css']
 })
-export class ServicosGeraisComponent implements OnInit {
+export class PetshopComponent implements OnInit {
 
   categoria: CategoriaProduto= new CategoriaProduto()
   idCategoria: number

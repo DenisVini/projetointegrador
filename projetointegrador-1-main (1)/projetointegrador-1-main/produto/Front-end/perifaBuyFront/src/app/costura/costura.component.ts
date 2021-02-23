@@ -8,11 +8,11 @@ import { CategoriaService } from '../service/categoria.service';
 import { ProdutoService } from '../service/produto.service';
 
 @Component({
-  selector: 'app-servicos-gerais',
-  templateUrl: './servicos-gerais.component.html',
-  styleUrls: ['./servicos-gerais.component.css']
+  selector: 'app-costura',
+  templateUrl: './costura.component.html',
+  styleUrls: ['./costura.component.css']
 })
-export class ServicosGeraisComponent implements OnInit {
+export class CosturaComponent implements OnInit {
 
   categoria: CategoriaProduto= new CategoriaProduto()
   idCategoria: number

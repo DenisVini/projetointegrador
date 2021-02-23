@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid fixed-top">
   <div class="row corPerifa">
     <div class="col-md-6">
       <nav class="navbar navbar-expand-lg navbar-light">
@@ -19,7 +19,9 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
                   <!--Barra de pesquisa-->
+          <!--Barra de pesquisa
           <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-10">
@@ -32,7 +34,9 @@
                 </div>
             </div>
           </div>
+          -->
           <!--fim da Barra de pesquisa-->
+
       </nav>
     </div>
     <div class="col-md-6">
@@ -71,12 +75,15 @@
                 class="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <a class="dropdown-item" routerLink="/entrar">Entre</a>
-                <a class="dropdown-item" routerLink="/cadastro-usuario"
+                <a class="dropdown-item" *ngIf="!mostrarNome()" routerLink="/entrar">Entre</a>
+                <a class="dropdown-item" *ngIf="!mostrarNome()" routerLink="/cadastro-usuario"
                   >Cadastre-se</a
                 >
-                <a class="dropdown-item" routerLink="/cadastro-produto">Cadastrar Produto</a>
+                <a class="dropdown-item" *ngIf="mostrarNome()" routerLink="/meu-perfil">Meu perfil</a>
+                <a class="dropdown-item" *ngIf="mostrarNome()" onClick="window.location.reload()">Sair</a>
               </div>
+
+            
             </li>
             <li class="nav-item" *ngIf="mostrarNome()">
               <a class="nav-link">{{nome}}</a>

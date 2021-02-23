@@ -33,6 +33,9 @@ export class CarrinhoService {
     return this.http.delete(`http://localhost:8080/carrinho/delete/${id}`,this.token)
   }
 
+  deleteAllCarrinho(){
+    return this.http.delete(`http://localhost:8080/carrinho/delete`,this.token)
+  }
 
 
 }

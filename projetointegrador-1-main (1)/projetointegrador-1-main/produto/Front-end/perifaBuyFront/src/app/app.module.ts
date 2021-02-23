@@ -29,6 +29,9 @@ import { ServicosGeraisComponent } from './servicos-gerais/servicos-gerais.compo
 import { MerceariasComponent } from './mercearias/mercearias.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { PadariasComponent } from './padarias/padarias.component';
+import { CosturaComponent } from './costura/costura.component';
+import { PetshopComponent } from './petshop/petshop.component';
+import { SacolaoComponent } from './sacolao/sacolao.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +54,10 @@ import { PadariasComponent } from './padarias/padarias.component';
     ServicosGeraisComponent,
     MerceariasComponent,
     RestaurantesComponent,
-    PadariasComponent
+    PadariasComponent,
+    CosturaComponent,
+    PetshopComponent,
+    SacolaoComponent
 
   ],
   imports: [

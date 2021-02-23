@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Carrinho } from '../model/carrinho';
 import { Produto } from '../model/produto';
 import { AuthService } from '../service/auth.service';
@@ -53,5 +54,17 @@ export class CarrinhoComponent implements OnInit {
     this.carrinhoService.deleteByIdCarrinho(id).subscribe(() => {});
     alert('Produto removido do carrinho com sucesso!');
     this.findAllCarrinho();
+  }
+
+  logado(){
+    let ok = false
+    if (environment.token != ''){
+      ok = true
+    }
+    return ok
+  }
+
+  alerta(){
+    alert('Logue para realizar sua compra')
   }
 }

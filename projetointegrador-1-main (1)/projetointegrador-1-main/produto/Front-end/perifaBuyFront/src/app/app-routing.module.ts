@@ -14,6 +14,10 @@ import { ServicosGeraisComponent } from './servicos-gerais/servicos-gerais.compo
 import { MerceariasComponent } from './mercearias/mercearias.component';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { PadariasComponent } from './padarias/padarias.component';
+import { CosturaComponent } from './costura/costura.component';
+import { PetshopComponent } from './petshop/petshop.component';
+import { SacolaoComponent } from './sacolao/sacolao.component';
+import { MeuPerfilComponent } from './meu-perfil/meu-perfil.component';
 
 
 const routes: Routes = [
@@ -31,6 +35,10 @@ const routes: Routes = [
   {path:'mercearias/:id', component: MerceariasComponent},
   {path:'restaurantes/:id', component: RestaurantesComponent},
   {path:'padarias/:id', component: PadariasComponent},
+  {path:'costura/:id', component: CosturaComponent},
+  {path:'petshop/:id', component: PetshopComponent},
+  {path:'sacolao/:id', component: SacolaoComponent},
+  {path:'meu-perfil', component: MeuPerfilComponent},
   {path:'contato', component: ContatoComponent},
 ];
 

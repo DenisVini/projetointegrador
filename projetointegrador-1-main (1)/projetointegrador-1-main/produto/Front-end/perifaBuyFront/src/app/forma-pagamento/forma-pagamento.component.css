@@ -1,3 +1,7 @@
+.pointer{
+  cursor: pointer;
+}
+
 
 #img-logo{
     background-image: url('https://i.imgur.com/Kz17cuT.jpg');
@@ -38,5 +42,5 @@ ul.social-network li{
   background-color:  #FAE977;
 }
 .ml-day{
-  margin-left: 30%;
+  margin-left: 35%;
 }

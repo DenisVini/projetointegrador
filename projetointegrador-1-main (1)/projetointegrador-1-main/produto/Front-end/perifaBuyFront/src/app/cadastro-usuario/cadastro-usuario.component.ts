@@ -32,7 +32,7 @@ export class CadastroUsuarioComponent implements OnInit {
     }else{
       this.authService.cadastrar(this.user).subscribe((resp: Usuario)=>{
         this.user = resp
-        this.rota.navigate(['/inicio'])
+        this.rota.navigate(['/entrar'])
         alert('Usuário cadastrado com sucesso!')
       })
     }

@@ -1,4 +1,6 @@
-
+.corLixo{
+    color: #c52f2f;
+}
 
 .flex-container {
     display: flex;
@@ -70,7 +72,7 @@
         }
 
         .fc{
-            color: rgb(16, 184, 16); /*cor do botão de adicionar*/
+            color: rgb(223, 83, 27); /*cor do botão de adicionar*/
         }
         
         .fcv{
@@ -79,4 +81,11 @@
 
         .pointer{
             cursor: pointer;
+        }
+        .fs-14{
+            font-size: 14pt;
+        }
+
+        .btn{
+            
         }

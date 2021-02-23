@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div class="container-fluid corPerifa">
+    <div class="jumbotron jumbotron-fluid" style="background-color: #FAE977">
+      <div class="container d-flex justify-content-center d-flex align-items-center">
+        <img src="https://i.imgur.com/XkiK7nN.png " alt="" height="250" width="300"
+        />
+        <!-- no campo src colocar algo do tipo {{fornecedor.foto}}  -->
+        <h1 class="ml-50">SACOLÃO DA LARA</h1>
+        <!-- trocar Nome da loja por algo semelhante a {{fornecedor.nome}} -->
+      </div>
+    </div>
+  </div>
+<div class="row w-100 d-flex justify-content-center ">
+      <div class="flex-wrap col-md-12 d-flex justify-content-center mb-5">
+        <div class="card corFundo mx-4 mb-5 " style="width: 20%;" *ngFor='let produto of categoria.produto'>
+          <img src="{{produto.imagem_produto}}" class="card-img-top" alt="{{produto.nome}}">
+          <div class="card-body">
+            <h5 class="card-title">{{produto.nome}}</h5>
+            <p class="card-text fs-descricao">{{produto.descricao}}</p>
+            <h5 class="card-text">{{produto.precoUnitario | currency: 'BRL' }}</h5>
+            <a class="card-link fc fa fa-plus-circle fa-3x ml-140 pointer" aria-hidden="true" (click)='addCarrinho(produto.id)'></a>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success mb-5" routerLink='/carrinho'>Ir para o carrinho</button>
+    </div>
+    <app-rodape></app-rodape>

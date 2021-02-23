@@ -1,3 +1,11 @@
+.mtper{
+    margin-top: 14px;
+}
+
+.fs-11{
+    font-size: 11pt;
+}
+
 .fs{
     font-size: 16pt;
 }
@@ -36,6 +44,10 @@ ul.social-network  li {
 .fa-instagram:hover {
 color: #C13584;
 }
-.fa-linkedin-square:hover {
+.fagit:hover {
     color: #0072B1;
+}
+
+.fs-10{
+    font-size: 10pt;
 }

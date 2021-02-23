@@ -12,4 +12,7 @@ export class RodapeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  enviarEmail(){
+    alert ("Email cadastrado com sucesso!")
+  }
 }

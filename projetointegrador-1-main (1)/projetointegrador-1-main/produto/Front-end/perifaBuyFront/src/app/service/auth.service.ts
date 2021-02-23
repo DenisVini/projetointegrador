@@ -34,4 +34,8 @@ export class AuthService {
     }
     return ok
   }
+
+  atualizar(user:Usuario) {
+    return this.http.put<Usuario>('http://localhost:8080/usuarios/atualizar', user)
+  }
 }
