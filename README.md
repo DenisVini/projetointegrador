@@ -1,4 +1,4 @@
-<img src="https://images.newscientist.com/wp-content/uploads/2016/03/internet-copy.gif" align= "center" width="1890" height="200"  />
+<img src="https://images.newscientist.com/wp-content/uploads/2016/03/internet-copy.gif" align= "center" width="1890" height="200" />
 <h1 align="center"> Olá Mundo, somos a PerifaBuy. </h1>
 <h3 align="center"> Une você ao comerciante mais próximo de você <h3>
 <p align="center"> Hoje em dia vemos muitos aplicativos de delivery, que une você a diversos comércios. E nós moradores de periferia, não temos acesso muitas vezes à entregas de pedidos, e viemos com a idéia de colocar todos as vertentes comerciais do seu bairro, à nossa aplicação.  </p>
@@ -7,10 +7,10 @@
 <br>
 <br>
 
-- :man_technologist: **Desenvolvedor Full Stack**
-- :books: **Concluí recentemente o bootcamp de Desenvolvimento de Software Full Stack da Generation Brasil**
-- :bulb: **Trabalhando atualmente no desenvolvimento do PerifaBuy - Aplicativo que liga você aos comerciantes do seu bairro**
-- :book: **Atualmente estudando Scrum- Metodologias Ágeis**
+- :man_technologist: :woman_technologist: **Desenvolvedorxs Full-Stack**
+- :books: **Primeira versão do projeto PerifaBuy que está em desenvolvimento e terá futuras implementações.  **
+- :bulb: **PerifaBuy - Aplicativo que conecta você aos comerciantes do seu bairro**
+- :book: **Utilizado Scrum como metodologia ágil em nossa gestão de projeto **
 
 
 
